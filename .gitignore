@@ -55,3 +55,13 @@ Thumbs.db
 # Packaged app artifacts (regenerate on demand)
 backend/dist_finwise/
 android/app/build/
+
+# Python virtual environments
+backend/venv/
+venv/
+env/
+
+# Chaquopy bundled packages
+android/app/src/main/python/pydantic/
+android/app/src/main/python/sqlalchemy/
+android/app/src/main/python/requirements.txt
