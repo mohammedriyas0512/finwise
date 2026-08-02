@@ -54,3 +54,4 @@ Thumbs.db
 
 # Packaged app artifacts (regenerate on demand)
 backend/dist_finwise/
+android/app/build/
