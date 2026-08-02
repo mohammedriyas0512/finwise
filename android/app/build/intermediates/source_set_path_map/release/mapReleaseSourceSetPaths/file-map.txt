@@ -1,0 +1,7 @@
+com.finwise.app-pngs-0 C:\Project File\FinWise\android\app\build\generated\res\pngs\release
+com.finwise.app-resValues-1 C:\Project File\FinWise\android\app\build\generated\res\resValues\release
+com.finwise.app-packageReleaseResources-2 C:\Project File\FinWise\android\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+com.finwise.app-packageReleaseResources-3 C:\Project File\FinWise\android\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+com.finwise.app-release-4 C:\Project File\FinWise\android\app\build\intermediates\merged_res\release\mergeReleaseResources
+com.finwise.app-main-5 C:\Project File\FinWise\android\app\src\main\res
+com.finwise.app-release-6 C:\Project File\FinWise\android\app\src\release\res

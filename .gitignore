@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.build_venv/
+
+# PyInstaller build scratch
+backend/build_finwise/
+backend/work_finwise/
+*.spec
+
+# Runtime data (auto-created on first run)
+database/
+backend/database/
+exports/
+backend/exports/
+logs/
+backend/logs/
+uploads/
+backend/uploads/
+*.log
+
+# Built frontend (regenerate with `npm run build`)
+frontend/dist/
+backend/dist/
+dist/
+build/
+
+# Node.js
+node_modules/
+frontend/node_modules/
+
+# Gradle
+.gradle/
+android/.gradle/
+
+# Secrets (never commit)
+.env
+.env.*
+!.env.example
+
+# Android SDK (large binaries)
+android-sdk/
+
+# APK files
+*.apk
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Packaged app artifacts (regenerate on demand)
+backend/dist_finwise/

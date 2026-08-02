@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.application'
+    id 'com.chaquo.python'
+}
+
+android {
+    namespace 'com.finwise.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.finwise.app"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            abiFilters "arm64-v8a", "x86_64"
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile rootProject.file(project.hasProperty('FINWISE_STORE_FILE') ? FINWISE_STORE_FILE : 'finwise-release.keystore')
+            storePassword project.hasProperty('FINWISE_STORE_PASSWORD') ? FINWISE_STORE_PASSWORD : ''
+            keyAlias project.hasProperty('FINWISE_KEY_ALIAS') ? FINWISE_KEY_ALIAS : 'finwise'
+            keyPassword project.hasProperty('FINWISE_KEY_PASSWORD') ? FINWISE_KEY_PASSWORD : ''
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError false
+    }
+}
+
+chaquopy {
+    defaultConfig {
+        version "3.11"
+        buildPython "C:/Users/Asus/AppData/Roaming/uv/python/cpython-3.11.15-windows-x86_64-none/python.exe"
+        pip {
+            options "--no-deps"
+            install "-r", "src/main/python/requirements.txt"
+        }
+    }
+}
